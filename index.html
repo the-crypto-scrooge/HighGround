@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <title>Unity WebGL Player | High Ground</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
@@ -57,11 +60,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Registration2.loader.js";
+      var loaderUrl = buildUrl + "/HighGround.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Registration2.data",
-        frameworkUrl: buildUrl + "/Registration2.framework.js",
-        codeUrl: buildUrl + "/Registration2.wasm",
+        dataUrl: buildUrl + "/HighGround.data",
+        frameworkUrl: buildUrl + "/HighGround.framework.js",
+        codeUrl: buildUrl + "/HighGround.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "High Ground",
@@ -80,8 +83,8 @@
         container.className = "unity-mobile";
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
-        config.devicePixelRatio = 1;
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
+        //config.devicePixelRatio = 1;
+        //unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         canvas.style.width = "1600px";
         canvas.style.height = "900px";
