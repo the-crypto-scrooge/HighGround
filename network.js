@@ -1,7 +1,10 @@
 /*
 Used to set the network: https://chainlist.org/
 1 Mainnet
+3 Ropsten
+4 Rinkeby
 5 Goerli
+42 Kovan
 56 Binance Smart Chain Mainnet
 97 Binance Smart Chain Testnet
 100 xDai
@@ -19,4 +22,28 @@ Used to set the network: https://chainlist.org/
 338 Cronos Testnet
 */
 
-window.web3ChainId = 5;
+window.web3ChainId = 1;
+
+// Onboard JS chain config objects
+
+// interface Chain {
+//   namespace?: 'evm';
+//   id: ChainId;
+//   rpcUrl: string;
+//   label: string;
+//   token: TokenSymbol;
+//   color?: string;
+//   icon?: string;
+//   providerConnectionInfo?: ConnectionInfo;
+//   publicRpcUrl?: string;
+//   blockExplorerUrl?: string;
+// }
+
+window.networks = [
+    {
+        id: 1,
+        label: "Ethereum Mainnet",
+        token: "ETH",
+        rpcUrl: 'https://mainnet.infura.io/v3/62e7c69da0a34d29862a43f89e5421a0',
+    }
+]
